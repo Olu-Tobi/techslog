@@ -1,0 +1,23 @@
+<%-  include('partials/header.ejs'); -%>
+<svg 
+style="position: absolute; top:3.5rem; right:0; width:15%;"
+viewBox="0 0 168 108" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 218px; height: 140px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 89.3565V48.4629L228 0V40.8936L0 89.3565Z" fill="#1abc9c88"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M67 107.115V66.2216L228 32V72.8936L67 107.115Z" fill="#1abc9c88"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M228 40.8936V32L67 66.2216V75.1152L228 40.8936Z" fill="#1abc9c"></path></svg>
+
+
+<div class="read-container">
+
+    <div class="read-post">
+        <h2><%= title %></h2>
+    
+    <div class="post-flex">
+        <div class="image-container">
+            <img class="post-image" src="<%= image %>" alt=""/>
+        </div>
+        
+        <p class="post-content"><%= content %></p>
+    </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs'); -%>

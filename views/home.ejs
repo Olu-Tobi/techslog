@@ -1,0 +1,59 @@
+
+  <%- include('partials/header'); -%>
+
+<div class="post-container">
+  <div class="left-edit">
+    <h2>Welcome!</h2>
+
+<p><%= homeStartingContent  %> </p>
+
+<img class="welcome-img" src="https://firebasestorage.googleapis.com/v0/b/shop-c8953.appspot.com/o/undraw_hello_re_3evm.svg?alt=media&token=e79912b8-855e-4169-af96-4a4eb49322a5" alt=""/>
+  </div>
+
+
+<div class="right-edit">
+  <a style="text-decoration: none" href="/compose" class="btn compose-btn">Compose</a>
+
+  <div class=" right-background">
+        
+        
+    <img class="right-image-back" src="https://firebasestorage.googleapis.com/v0/b/shop-c8953.appspot.com/o/undraw_reading_time_re_phf7.svg?alt=media&token=d8168cd3-7175-493b-8083-57e704673eb3" alt=""/>
+    <p class="navbar-brand right-brand" style="z-index: 10;">TECHSLOG</p>
+  
+</div>
+
+  <div class="right-grid">
+     <!-- for (var i = 0; i<newPosts.length; i++){
+  newPosts[i].title
+   newPosts[i].bodyText
+} -->
+<% newPosts.forEach(function(post){ %>
+
+
+  <div class="card card-edit" style="width: 16rem;">
+    <img class=" card-img-top" src="<%= post.imageUrl %>" alt="">
+    <div class="card-body">
+      <h5 class="card-title "><%= post.title %></h5>
+      <p class="card-text" style="text-align: justify;">
+        <%= post.bodyText.substring(0, 100).concat('...') %>
+    
+        <a style="text-decoration: none" href="/posts/ <%= post.title %>  ">Read more</a>
+      </p>
+    </div>
+  </div>
+
+  
+
+
+<%})%>
+  </div>
+
+</div>
+  
+</div>
+
+
+
+<%- include('partials/footer'); -%>
+
+
